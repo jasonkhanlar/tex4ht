@@ -7,12 +7,12 @@
 \ifx\cvrtexht\undefined\global\htmlfalse\else\global\htmltrue\fi
 
 \ifhtml
- \let\color\@gobble
- \let\textcolor\@gobbletwo
+  \let\color\@gobble
+  \let\textcolor\@gobbletwo
 \else
- \RequirePackage[dvipsnames,svgnames]{xcolor}
- \RequirePackage[hidelinks]{hyperref}
- \let\hlink=\href
+  \RequirePackage[dvipsnames,svgnames]{xcolor}
+  \RequirePackage[hidelinks]{hyperref}
+  \let\hlink=\href
 \fi
 
 \newlength\m@size
@@ -43,15 +43,15 @@
 \def\verbatim@font{\small\ttfamily\color{\myverbcolor}}
 
 \def\Verb{\bgroup \catcode`\^=12 \catcode`\\=12  \catcode`\%=12
-       \catcode`\{=12    \catcode`\}=12    \catcode`\#=12     \catcode`\#=12
-       \leavevmode \Xctgs}
-    \def\Xctgs#1{\def\Xeat##1#1{\def\tmp{##1}\verbfont\expandafter
+        \catcode`\{=12    \catcode`\}=12    \catcode`\#=12     \catcode`\#=12
+        \leavevmode \Xctgs}
+\def\Xctgs#1{\def\Xeat##1#1{\def\tmp{##1}\verbfont\expandafter
         \strip@prefix\meaning\tmp\egroup}\Xeat }
 
 \newdimen\Linewidth
 \Linewidth=\textwidth
 \def\computelinewidth#1{\Linewidth=\textwidth
-     \advance\Linewidth by -#1}
+        \advance\Linewidth by -#1}
 
 \newdimen\fspace
 \fspace=5mm
@@ -62,18 +62,18 @@
 \fi
 
 \def\fline#1 #2\par{\par\vskip.25\baselineskip\noindent
-     \parbox[t]{\fspace}{\small\ttfamily\textcolor{\myflinecolor}{#1}\hfill}%
-     \computelinewidth{1.5\fspace}%
-     \parbox[t]{\Linewidth}{#2}}
+        \parbox[t]{\fspace}{\small\ttfamily\textcolor{\myflinecolor}{#1}\hfill}%
+        \computelinewidth{1.5\fspace}%
+        \parbox[t]{\Linewidth}{#2}}
 
 \let\Fline\fline
 
 \def\Example{\subsection*{Example}}
 
 \ifhtml\relax\else
- \RequirePackage{charter}
- \IfFileExists{lfr.sty}{\RequirePackage[scaled=.9]{lfr}}{}
- \IfFileExists{prima.sty}{\RequirePackage[scaled=.9]{prima}}{}
+  \RequirePackage{charter}
+  \IfFileExists{lfr.sty}{\RequirePackage[scaled=.9]{lfr}}{}
+  \IfFileExists{prima.sty}{\RequirePackage[scaled=.9]{prima}}{}
 \fi
 
 \endinput

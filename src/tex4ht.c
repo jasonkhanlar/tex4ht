@@ -1,6 +1,6 @@
 
 /**********************************************************/
-/* tex4ht.c                              Version 1.1 */
+/* tex4ht.c                                   Version 1.1 */
 /* Copyright (C) 1996--2009    Eitan M. Gurari            */
 /* Copyright 2009 TeX Users Group                         */
 /* This work may be distributed and/or modified under the */
@@ -15,7 +15,7 @@
 /* This work has the LPPL maintenance status "maintained".*/
 /*                                                        */
 /* The Current Maintainer of this work                    */
-/* is the TeX4ht Project                                  */
+/* is the TeX4ht Project.                                 */
 /*                                                        */
 /* If you modify this program your changing its signature */
 /* with a directive of the following form will be         */

@@ -7,11 +7,11 @@ relname = $(pkg)-$(version)
 
 dist: $(relname).tar.gz
 $(relname).tar.gz: force
-	rm -f $@
-	tar -czf $@ --owner=0 --group=0 \
-	  --transform="s,^,$(relname)/," --exclude-vcs \
-	  *
-	tar tf $@ | head
+    rm -f $@
+    tar -czf $@ --owner=0 --group=0 \
+      --transform="s,^,$(relname)/," --exclude-vcs \
+      *
+    tar tf $@ | head
 # * won't really work, just a placeholder.
 
 force:

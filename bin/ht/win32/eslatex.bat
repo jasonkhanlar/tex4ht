@@ -1,7 +1,7 @@
 
 Rem 
 Rem 
-Rem   eslatex.bat                                  Version 1.1
+Rem   eslatex.bat                                Version 1.1
 Rem   Copyright (C) 2003--2009               Eitan M. Gurari
 Rem   Copyright 2009 TeX Users Group
 Rem 
@@ -28,7 +28,7 @@ Rem
         latex %5 \makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx"\HCode\def\HCode"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.{\g@addto@macro\@documentclasshook{\RequirePackage[#1,xhtml,emspk]{tex4ht}}\let\HCode\documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname tex4ht\endcsname{#1,xhtml,emspk}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode %2.a.b.c.\input  %1
         latex %5 \makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx"\HCode\def\HCode"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.{\g@addto@macro\@documentclasshook{\RequirePackage[#1,xhtml,emspk]{tex4ht}}\let\HCode\documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname tex4ht\endcsname{#1,xhtml,emspk}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode %2.a.b.c.\input  %1
         latex %5 \makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx"\HCode\def\HCode"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.{\g@addto@macro\@documentclasshook{\RequirePackage[#1,xhtml,emspk]{tex4ht}}\let\HCode\documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname tex4ht\endcsname{#1,xhtml,emspk}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode %2.a.b.c.\input  %1
-        tex4ht %1  -ic:/tex4ht/texmf/tex4ht/ht-fonts/%3 -ec:/tex4ht/texmf/tex4ht/base/win32/tex4ht.env -cemspkhtf -s4es
+        tex4ht %1 -ic:/tex4ht/texmf/tex4ht/ht-fonts/%3 -ec:/tex4ht/texmf/tex4ht/base/win32/tex4ht.env -cemspkhtf -s4es
         t4ht %1 %4 -ec:/tex4ht/texmf/tex4ht/base/win32/tex4ht.env -cemspk 
 
 

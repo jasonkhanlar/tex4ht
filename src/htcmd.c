@@ -1,6 +1,6 @@
 
 /**********************************************************/
-/* htcmd.c                               Version 1.1 */
+/* htcmd.c                                    Version 1.1 */
 /* Copyright (C) 1996--2009    Eitan M. Gurari            */
 /* Copyright 2009 TeX Users Group                         */
 /* This work may be distributed and/or modified under the */
@@ -30,7 +30,7 @@
     Compiler options                            *
     (uncommented | command line)                *
 ------------------------------------------------*
-        Clasic C (CC)             default
+       Classic C (CC)             default
 #define ANSI                      ansi-c, c++
 #define DOS_C
 #define HAVE_STRING_H             <string.h>

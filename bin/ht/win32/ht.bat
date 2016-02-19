@@ -1,6 +1,7 @@
+
 Rem 
 Rem 
-Rem   ht.bat                                  Version 1.1
+Rem   ht.bat                                     Version 1.1
 Rem   Copyright (C) 2003--2009               Eitan M. Gurari
 Rem   Copyright 2009 TeX Users Group
 Rem 
@@ -28,5 +29,5 @@ Rem
         %1 %2
         %1 %2
         tex4ht %2
-        t4ht %2  %3
+        t4ht %2 %3
 

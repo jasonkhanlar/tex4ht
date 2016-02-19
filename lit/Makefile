@@ -130,8 +130,8 @@ tex4ht_moz_derived = mozilla.4ht
 
 derived += $(tex4ht_oo_xtpipes_derived)
 tex4ht_oo_xtpipes_derived = \
-   oo-math.4xt oo-text.4xt \
-   OoUtilities.java OomFilter.java OoFilter.java
+  oo-math.4xt oo-text.4xt \
+  OoUtilities.java OomFilter.java OoFilter.java
 
 derived += $(tex4ht_ooffice_derived)
 tex4ht_ooffice_derived = ooffice.4ht ooffice-mml.4ht
@@ -183,140 +183,140 @@ xtpipes_derived = \
 all: $(derived)
 
 $(tex4ht_4ht_derived): tex4ht-4ht.tex $(common)
-	tex $(tex_opts) $<
+  tex $(tex_opts) $<
 
 $(tex4ht_bibtex2_derived): tex4ht-bibtex2.tex $(common)
-	latex $(tex_opts) $<
+  latex $(tex_opts) $<
 
 $(tex4ht_c_derived): tex4ht-c.tex $(common)
-	tex $(tex_opts) $<
+  tex $(tex_opts) $<
 
 $(tex4ht_cond4ht_derived): tex4ht-cond4ht.tex $(common)
-	tex $(tex_opts) $<
-	tex $(tex_opts) cond4ht.4ht
+  tex $(tex_opts) $<
+  tex $(tex_opts) cond4ht.4ht
 
 $(tex4ht_docbook_xtpipes_derived): tex4ht-docbook-xtpipes.tex $(common)
-	xhlatex $< "html,3" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3" "" "-d./" $(tex_1opt)
 
 $(tex4ht_docbook_derived): tex4ht-docbook.tex $(common)
-	xhlatex $< "html,3" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3" "" "-d./" $(tex_1opt)
 
 $(tex4ht_env_derived): tex4ht-env.tex $(common)
-	htlatex $< "xhtml,3" "" "-d./" $(tex_1opt)
+  htlatex $< "xhtml,3" "" "-d./" $(tex_1opt)
 
 $(tex4ht_fonts_cjk_derived): tex4ht-fonts-cjk.tex
-	ht tex $<
+  ht tex $<
 
 $(tex4ht_fonts_cjk_utf8_derived): tex4ht-fonts-cjk-utf8.tex
-	ht tex $<
+  ht tex $<
 
 $(tex4ht_fonts_noncjk_derived) $(tex4ht_fonts_modern_derived): \
   tex4ht-fonts-noncjk.tex tex4ht-fonts-modern.tex $(common)
-	ht tex $<
+  ht tex $<
 
 $(tex4ht_htcmd_derived): tex4ht-htcmd.tex $(common)
-	ht tex $<
+  ht tex $<
 
 $(tex4ht_html_speech_derived): tex4ht-html-speech.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_html_speech_xtpipes_derived): tex4ht-html-speech-xtpipes.tex $(common)
-	htlatex $< "html,next,3" "" "-d./" $(tex_1opt)
+  htlatex $< "html,next,3" "" "-d./" $(tex_1opt)
 
 $(tex4ht_html0_derived): tex4ht-html0.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_html32_derived): tex4ht-html32.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 # must create/update html4.4ht-released by hand.
 $(tex4ht_html4_derived): tex4ht-html4.tex $(common)
-	cp html4.4ht-released html4.4ht && latex $(tex_opts) $<
-	cp html4.4ht-released html4.4ht && latex $(tex_opts) $<
-	latex $(tex_opts) $<
+  cp html4.4ht-released html4.4ht && latex $(tex_opts) $<
+  cp html4.4ht-released html4.4ht && latex $(tex_opts) $<
+  latex $(tex_opts) $<
 
 $(tex4ht_info_mml_derived): tex4ht-info-mml.tex $(common_info)
-	htlatex $< "html,sections+" "" "-d./" $(tex_1opt)
+  htlatex $< "html,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_info_ooffice_derived): tex4ht-info-ooffice.tex $(common_info)
-	htlatex $< "html,sections+" "" "-d./" $(tex_1opt)
+  htlatex $< "html,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_info_svg_derived): tex4ht-info-svg.tex $(common_info)
-	htlatex $< "html,sections+" "" "-d./" $(tex_1opt)
+  htlatex $< "html,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_info_derived): tex4ht-info.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_javahelp_xtpipes_derived): tex4ht-javahelp-xtpipes.tex $(common)
-	htlatex $< "xhtml,next,3" "" "-d./" $(tex_1opt)
+  htlatex $< "xhtml,next,3" "" "-d./" $(tex_1opt)
 
 $(tex4ht_javahelp_derived): tex4ht-javahelp.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_jsmath_derived): tex4ht-jsmath.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_jsml_xtpipes_derived): tex4ht-jsml-xtpipes.tex $(common)
-	htlatex $< "xhtml,next,3" "" "-d./" $(tex_1opt)
+  htlatex $< "xhtml,next,3" "" "-d./" $(tex_1opt)
 
 $(tex4ht_jsml_derived): tex4ht-jsml.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_mathltx_derived): tex4ht-mathltx.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_mathml_derived): tex4ht-mathml.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_mathplayer_derived): tex4ht-mathplayer.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_mkht_derived): tex4ht-mkht.tex $(common)
-	latex $(tex_opts) $<
-	perl -c mk4ht.perl  # syntax check
-	latex $(tex_opts) mkht-scripts.4ht
+  latex $(tex_opts) $<
+  perl -c mk4ht.perl  # syntax check
+  latex $(tex_opts) mkht-scripts.4ht
 
 $(tex4ht_moz_derived): tex4ht-moz.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_oo_xtpipes_derived): tex4ht-oo-xtpipes.tex $(common)
-	htlatex $< "xhtml,next,3" "" "-d./" $(tex_1opt)
+  htlatex $< "xhtml,next,3" "" "-d./" $(tex_1opt)
 
 $(tex4ht_ooffice_derived): tex4ht-ooffice.tex $(common)
-	htlatex $< "xhtml,4,sections+" "" "-d./" $(tex_1opt)
+  htlatex $< "xhtml,4,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_ooimpress_derived): tex4ht-ooimpress.tex $(common)
-	htlatex $< "xhtml,4,sections+" "" "-d./" $(tex_1opt)
+  htlatex $< "xhtml,4,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_options_derived): tex4ht-options.tex $(common)
-	mk4ht xhlatex $<
+  mk4ht xhlatex $<
 
 $(tex4ht_sty_derived): tex4ht-sty.tex $(common)
-	ht tex $<
+  ht tex $<
 
 $(tex4ht_svg_derived): tex4ht-svg.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_t4ht_derived): tex4ht-t4ht.tex $(common)
-	ht tex $<
+  ht tex $<
 
 $(tex4ht_tei_derived): tex4ht-tei.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_unicode_derived): tex4ht-unicode.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_word_derived): tex4ht-word.tex $(common)
-	xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
+  xhlatex $< "html,3,sections+" "" "-d./" $(tex_1opt)
 
 $(tex4ht_xhtml_xtpipes_derived): tex4ht-xhtml-xtpipes.tex $(common)
-	htlatex $< "xhtml,3,next" "" "-d./" $(tex_1opt)
+  htlatex $< "xhtml,3,next" "" "-d./" $(tex_1opt)
 
 $(tex4ht_xhtmml_xtpipes_derived): tex4ht-xhtmml-xtpipes.tex $(common)
-	htlatex $< "xhtml,3,next" "" "-d./" $(tex_1opt)
+  htlatex $< "xhtml,3,next" "" "-d./" $(tex_1opt)
 
 $(xtpipes_derived): xtpipes.tex $(common)
-	htlatex $< "xhtml,3,next" "" "-d./" $(tex_1opt)
+  htlatex $< "xhtml,3,next" "" "-d./" $(tex_1opt)
 # Derived files are generated in . and $(wd).
 # (corresponds to src/java for xtpipes.tex)
 
@@ -333,104 +333,104 @@ update = cp -pr
 mkdir = install -d
 #
 update: all
-	$(update) $(tex4ht_bibtex2_derived) $(dest_src)/
+  $(update) $(tex4ht_bibtex2_derived) $(dest_src)/
 #
-	$(update) $(tex4ht_c_derived) $(dest_src)/
+  $(update) $(tex4ht_c_derived) $(dest_src)/
 #
-	$(update) $(tex4ht_cond4ht_derived) $(dest_texmf)/
+  $(update) $(tex4ht_cond4ht_derived) $(dest_texmf)/
 #
-	$(update) docbook.4xt $(dest_xtpipes)/
-	$(update) DbUtilities.java $(dest_java)/
+  $(update) docbook.4xt $(dest_xtpipes)/
+  $(update) DbUtilities.java $(dest_java)/
 #
-	$(update) $(tex4ht_docbook_derived) $(dest_texmf)/
+  $(update) $(tex4ht_docbook_derived) $(dest_texmf)/
 #
-	$(mkdir) $(dest_base)/unix $(dest_base)/win32
-	$(update) tex4ht.env-unix $(dest_base)/unix/
-	$(update) tex4ht.env-win32 $(dest_base)/win32/
+  $(mkdir) $(dest_base)/unix $(dest_base)/win32
+  $(update) tex4ht.env-unix $(dest_base)/unix/
+  $(update) tex4ht.env-win32 $(dest_base)/win32/
 #
-	$(update) $(tex4ht_html_speech_xtpipes_derived) $(dest_texmf)/
+  $(update) $(tex4ht_html_speech_xtpipes_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_html_speech_derived) $(dest_texmf)/
+  $(update) $(tex4ht_html_speech_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_html0_derived) $(dest_texmf)/
+  $(update) $(tex4ht_html0_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_html32_derived) $(dest_texmf)/
+  $(update) $(tex4ht_html32_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_html4_derived) $(dest_texmf)/
+  $(update) $(tex4ht_html4_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_info_mml_derived) $(dest_texmf)/
+  $(update) $(tex4ht_info_mml_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_info_ooffice_derived) $(dest_texmf)/
+  $(update) $(tex4ht_info_ooffice_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_info_svg_derived) $(dest_texmf)/
+  $(update) $(tex4ht_info_svg_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_info_derived) $(dest_texmf)/
+  $(update) $(tex4ht_info_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_javahelp_xtpipes_derived) $(dest_texmf)/
+  $(update) $(tex4ht_javahelp_xtpipes_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_javahelp_derived) $(dest_texmf)/
+  $(update) $(tex4ht_javahelp_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_jsmath_derived) $(dest_texmf)/
+  $(update) $(tex4ht_jsmath_derived) $(dest_texmf)/
 #
-	$(update) jsml.4xt $(dest_xtpipes)/
-	$(update) HtJsml.java GroupMn.java JsmlFilter.java \
-	          JsmlMathBreak.java $(dest_java)/
+  $(update) jsml.4xt $(dest_xtpipes)/
+  $(update) HtJsml.java GroupMn.java JsmlFilter.java \
+            JsmlMathBreak.java $(dest_java)/
 #
-	$(update) $(tex4ht_jsml_derived) $(dest_texmf)/
+  $(update) $(tex4ht_jsml_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_mathltx_derived) $(dest_texmf)/
+  $(update) $(tex4ht_mathltx_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_mathplayer_derived) $(dest_texmf)/
+  $(update) $(tex4ht_mathplayer_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_moz_derived) $(dest_texmf)/
+  $(update) $(tex4ht_moz_derived) $(dest_texmf)/
 #
-	$(update) oo-text.4xt oo-math.4xt $(dest_xtpipes)/
-	$(update) OoUtilities.java OomFilter.java $(dest_java)/
+  $(update) oo-text.4xt oo-math.4xt $(dest_xtpipes)/
+  $(update) OoUtilities.java OomFilter.java $(dest_java)/
 #
-	$(update) $(tex4ht_ooffice_derived) $(dest_texmf)/
+  $(update) $(tex4ht_ooffice_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_ooimpress_derived) $(dest_texmf)/
+  $(update) $(tex4ht_ooimpress_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_options_derived) $(dest_texmf)/
+  $(update) $(tex4ht_options_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_sty_derived) $(dest_texmf)/
+  $(update) $(tex4ht_sty_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_svg_derived) $(dest_texmf)/
+  $(update) $(tex4ht_svg_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_t4ht_derived) $(dest_src)/
+  $(update) $(tex4ht_t4ht_derived) $(dest_src)/
 #
-	$(update) $(tex4ht_tei_derived) $(dest_texmf)/
+  $(update) $(tex4ht_tei_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_unicode_derived) $(dest_texmf)/
+  $(update) $(tex4ht_unicode_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_word_derived) $(dest_texmf)/
+  $(update) $(tex4ht_word_derived) $(dest_texmf)/
 #
-	$(update) xhtml.4xt $(dest_xtpipes)/
-	$(update) XhtmlEmails.java $(dest_java)/
+  $(update) xhtml.4xt $(dest_xtpipes)/
+  $(update) XhtmlEmails.java $(dest_java)/
 #
-	$(update) xhtmml.4xt $(dest_xtpipes)/
-	$(update) XhtmmlUtilities.java $(dest_java)/
+  $(update) xhtmml.4xt $(dest_xtpipes)/
+  $(update) XhtmmlUtilities.java $(dest_java)/
 #
 # this has to be done last. Does anything else use $(wd)? We'll see.
-	rmdir $(wd)/bin
-	$(update) $(wd)/* $(dest_java)/
-	$(update) xtpipes.dtd xtpipes-map.dtd xtpipes-default.4xt 
-	  $(dest_xtpipes)/
+  rmdir $(wd)/bin
+  $(update) $(wd)/* $(dest_java)/
+  $(update) xtpipes.dtd xtpipes-map.dtd xtpipes-default.4xt 
+  $(dest_xtpipes)/
 
 clean: mostlyclean
-	rm -rf $(wd)
-	rm -f *.4ct *.4tc *.aux *.css *.dvi *.idv *.lg *.log *.tmp *.trc *.xref
-	rm -f *.4es *.bat *.unix *.htf *.html *.png tmp
+  rm -rf $(wd)
+  rm -f *.4ct *.4tc *.aux *.css *.dvi *.idv *.lg *.log *.tmp *.trc *.xref
+  rm -f *.4es *.bat *.unix *.htf *.html *.png tmp
 
 clean1:
-	rm -f $(f).[0-s]* $(f).[u-z]* $(f).trc
+  rm -f $(f).[0-s]* $(f).[u-z]* $(f).trc
 
 diff_files = $(tex4ht_mathml_derived) $(tex4ht_html_speech_derived) \
              $(tex4ht_jsml_derived) $(tex4ht_mathltx_derived)
 inst_dir = /usr/local/texlive/dev/texmf-dist/tex/generic/tex4ht
 diff = diff --ignore-all-space
 diff:
-	-for f in $(diff_files); do $(diff) -u0 $(inst_dir)/$$f .; done
+  -for f in $(diff_files); do $(diff) -u0 $(inst_dir)/$$f .; done
 
 mostlyclean:
-	rm -f $(derived)
+  rm -f $(derived)

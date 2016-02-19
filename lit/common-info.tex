@@ -60,7 +60,7 @@
     % Since all this is only about the info option with mzlatex,
     % just leaving it failing for now.  Other things to do.
     \def\CleanComment#1tex4ht-info#2#3#4.#5>#6//{[1\empty %
-                  \if,\ifnum \FIRST=#6 .\else ,0\fi\fi]#6//}
+        \if,\ifnum \FIRST=#6 .\else ,0\fi\fi]#6//}
     \def\eatIV#1#2#3#4{}
 \fi
 
@@ -71,6 +71,6 @@
 }
 
 \def\>>>#1<<<{\bgroup\csname no:catcodes\endcsname0{255}{12}%
-   \csname no:catcodes\endcsname{13}{13}{13}% ^^M
-   \def\temp##1>>>{\egroup
-      \expandafter \def\csname #1\endcsname{##1}}\temp}
+    \csname no:catcodes\endcsname{13}{13}{13}% ^^M
+    \def\temp##1>>>{\egroup
+        \expandafter \def\csname #1\endcsname{##1}}\temp}

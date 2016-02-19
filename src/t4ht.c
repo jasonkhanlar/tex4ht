@@ -1,7 +1,8 @@
+
 /**********************************************************/
 /* t4ht.c                                     Version 1.1 */
 /* Copyright (C) 1998--2009    Eitan M. Gurari            */
-/* Copyright 2009 TeX Users Group
+/* Copyright 2009 TeX Users Group                         */
 /* This work may be distributed and/or modified under the */
 /* conditions of the LaTeX Project Public License, either */
 /* version 1.3 of this license or (at your option) any    */

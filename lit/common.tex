@@ -25,9 +25,9 @@
 \multiply\tmpcnt  -60 \advance\tmpcnt  \time
 
 \edef\version{\the\year-\ifnum \month<10 0\fi
-  \the\month-\ifnum \day<10 0\fi\the\day
-   -\ifnum \temp<10 0\fi \temp
-   :\ifnum \tmpcnt<10 0\fi\the\tmpcnt}
+    \the\month-\ifnum \day<10 0\fi\the\day
+    -\ifnum \temp<10 0\fi \temp
+    :\ifnum \tmpcnt<10 0\fi\the\tmpcnt}
 
 % #1 is the first year for Eitan.  The last year is always 2009.  RIP.
 \def\CopyYear.#1.{#1-2009}

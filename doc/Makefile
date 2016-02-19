@@ -4,7 +4,7 @@
 pdflatex = pdflatex -interaction=nonstopmode -file-line-error
 
 tex4ht.pdf: tex4ht.tex cvrblog.sty *.tex
-	$(pdflatex) $<
+    $(pdflatex) $<
 
 # texinfo attempt.
 #texi2pdf = texi2pdf
@@ -17,13 +17,13 @@ tex4ht.pdf: tex4ht.tex cvrblog.sty *.tex
 #all: tex4ht.info tex4ht.pdf tex4ht.html tex4ht.txt
 #
 #tex4ht.html: tex4ht.texi
-#	$(texi2html) $<
+#    $(texi2html) $<
 #
 #tex4ht.info: tex4ht.texi
-#	$(texi2info) $<
+#    $(texi2info) $<
 #
 #tex4ht.pdf: tex4ht.texi
-#	$(texi2pdf) $<
+#    $(texi2pdf) $<
 #
 #tex4ht.txt: tex4ht.texi
-#	$(texi2txt) $<
+#    $(texi2txt) $<

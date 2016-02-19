@@ -8,7 +8,7 @@
 
 \documentclass{article}
   \input ProTex.sty
-   \AlProTex{4ht,<<<>>>,list,|,title}
+  \AlProTex{4ht,<<<>>>,list,|,title}
 
 \begin{document}
 
@@ -30,15 +30,15 @@
 \def\get{%
   \immediate\read15 to \line
   \ifeof15 \else
-     \expandafter\scan\line @@@@@@@@@&&&&
-     \expandafter\get
+    \expandafter\scan\line @@@@@@@@@&&&&
+    \expandafter\get
   \fi
 }
 \def\scan#1#2#3#4#5#6#7#8#9{\def\first{#1#2#3#4#5#6#7#8#9}\put}
 \def\put#1&&&&{%
-    \immediate\write15{\ifx \first\bibstyle 
-           \ifx \style\empty \line \else \bibstyle{\style}\fi
-        \else  \line\fi}}
+  \immediate\write15{\ifx \first\bibstyle 
+    \ifx \style\empty \line \else \bibstyle{\style}\fi
+    \else  \line\fi}}
 \newcount\c
 \def\Cats#1#2#3{\edef\temp{\the\c}%
   \c=#3

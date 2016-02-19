@@ -1,7 +1,7 @@
 
 Rem 
 Rem 
-Rem   dbmcontext.bat                                  Version 1.1
+Rem   dbmcontext.bat                             Version 1.1
 Rem   Copyright (C) 2003--2009               Eitan M. Gurari
 Rem   Copyright 2009 TeX Users Group
 Rem 
