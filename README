@@ -11,7 +11,7 @@ Commits mailing list: http://lists.tug.org/tex4ht-commits
 Development project:  http://puszcza.gnu.org.ua/projects/tex4ht/
 
 Bug reports: please include enough information for the maintainers to
- reproduce the problem.  Generally speaking, that means:
+reproduce the problem.  Generally speaking, that means:
 - the contents of any input files necessary to reproduce the bug (crucial!).
 - a description of the problem and any samples of the erroneous output.
 - the version number of tex4ht and the program(s) involved (use --version).
