@@ -397,7 +397,7 @@ update: all
 #
 	$(update) $(tex4ht_svg_derived) $(dest_texmf)/
 #
-	$(update) $(tex4ht_t4ht_derived) $(dest_src/
+	$(update) $(tex4ht_t4ht_derived) $(dest_src)/
 #
 	$(update) $(tex4ht_tei_derived) $(dest_texmf)/
 #
