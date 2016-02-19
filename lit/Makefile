@@ -1,4 +1,4 @@
-# $Id$
+# $Id: Makefile 162 2016-02-01 23:07:43Z karl $
 # This file is public domain.  Originally written 2010, Karl Berry.
 # 
 # todo: look for xx below
@@ -15,10 +15,10 @@ derived =
 
 derived += $(tex4ht_4ht_derived)
 tex4ht_4ht_derived = \
-  book.4ht listings.4ht memoir.4ht multicol.4ht quoting.4ht \
-  scrartcl.4ht scrbook.4ht scrreprt.4ht \
-  spanish.4ht \
-  titlesec.4ht tocloft.4ht wrapfig.4ht
+  book.4ht frenchb.4ht graphicx.4ht hyperref.4ht listings.4ht \
+  memoir.4ht multicol.4ht quoting.4ht \
+  scrartcl.4ht scrbook.4ht scrreprt.4ht spanish.4ht subscript.4ht \
+  titlesec.4ht tocloft.4ht wrapfig.4ht 
 # and many, many more.
 
 derived += $(tex4ht_bibtex2_derived)
@@ -45,13 +45,20 @@ tex4ht_fonts_cjk_derived = tex4ht-fonts-cjk.html # and lots more
 derived += $(tex4ht_fonts_cjk_utf8_derived)
 tex4ht_fonts_cjk_utf8_derived = tex4ht-fonts-cjk-utf8.html # and lots more
 
+# noncjk.tex \input's modern, but seems more maintainable
+# to have separate lists.
 derived += $(tex4ht_fonts_noncjk_derived)
 tex4ht_fonts_noncjk_derived = \
   tex4ht.dir/texmf/tex4ht/ht-fonts/alias/ec/eccc.htf \
   tex4ht.dir/texmf/tex4ht/ht-fonts/unicode/ec/eccc-uni.htf \
   tex4ht.dir/texmf/tex4ht/ht-fonts/alias/t1fonts/ClearSans-BoldItalic-lf-t1.htf \
   tex4ht.dir/texmf/tex4ht/ht-fonts/alias/t1fonts/ipxg-r-t1.htf \
+  tex4ht.dir/texmf/tex4ht/ht-fonts/unicode/jknappen/tc/tcrm.htf \
+  tex4ht.dir/texmf/tex4ht/ht-fonts/unicode/adobe/courier/pcrro8r.htf \
   SearchFonts.java lm-htf.tex
+tex4ht_fonts_modern_derived = \
+  tex4ht.dir/texmf/tex4ht/ht-fonts/unicode/lm/l7x-lmcsc.htf \
+  tex4ht.dir/texmf/tex4ht/ht-fonts/unicode/lm/l7x-lm.htf  
 # and lots more
 # whither tmp?  how change target dir?  what happened to cmtex.htf?  etc.
 
@@ -203,7 +210,7 @@ $(tex4ht_fonts_cjk_derived): tex4ht-fonts-cjk.tex
 $(tex4ht_fonts_cjk_utf8_derived): tex4ht-fonts-cjk-utf8.tex
 	ht tex $<
 
-$(tex4ht_fonts_noncjk_derived): \
+$(tex4ht_fonts_noncjk_derived) $(tex4ht_fonts_modern_derived): \
   tex4ht-fonts-noncjk.tex tex4ht-fonts-modern.tex $(common)
 	ht tex $<
 

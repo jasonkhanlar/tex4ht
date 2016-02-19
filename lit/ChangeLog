@@ -1,3 +1,65 @@
+2016-02-01  Michal Hoftich  <michal.h21@gmail.com>
+
+	* tex4ht-fonts-noncjk.tex (pcrro8r.htf): Fixed some wrong characters.
+        http://puszcza.gnu.org.ua/bugs/?271
+
+2016-01-12  Michal Hoftich  <michal.h21@gmail.com>
+
+	* tex4ht-4ht.tex (hyperref.4ht): Added support for \nameref* command,
+	http://tex.stackexchange.com/q/285339/2891,
+	http://puszcza.gnu.org.ua/bugs/?269.
+
+2016-01-04  Michal Hoftich  <michal.h21@gmail.com>
+
+	* tex4ht-4ht.tex (biblatex.4ht): Fix for version checking
+
+2015-12-19  Michal Hoftich  <michal.h21@gmail.com>
+
+	* tex4ht-ooffice.tex (il2-pl.tcx url encoder): Fix the file
+	encoding. It is related to a earlier bug in tex4ht-html4.tex,
+	where input encoding error was reported with package babel when
+	LuaLaTeX was used for compilation.  Just
+	\input{html4-l2-url.4ht}.
+	Report from Guido Milanese, Dec 18 23:29:28 CET 2015,
+	http://tug.org/pipermail/tex4ht/2015q4/001326.html.
+
+	* tex4ht-4ht.tex (<frenchb luatex>, frenchn.4ht): disable LuaTeX
+	callback which causes tex4ht command to fail.
+
+2015-10-25  Michal Hoftich  <michal.h21@gmail.com>
+
+	* tex4ht-fonts-noncjk.tex (tcrm-uni): Updated support for textcomp
+	font tcrm.
+	* Makefile (tex4ht_fonts_noncjk_derived): add derived file
+	tex4ht.dir/texmf/tex4ht/ht-fonts/unicode/jknappen/tc/tcrm.htf.
+	https://puszcza.gnu.org.ua/bugs/?264
+
+2015-10-09  Karl Berry  <karl@freefriends.org>
+
+	* Makefile (tex4ht_fonts_modern_derived): new var for l7x,
+ 	and make it a target in addition to noncjk_derived.
+
+2015-10-09   Michal Hoftich  <michal.h21@gmail.com>
+
+	* tex4ht-fonts-modern.tex (l7x-lmcsc.htf, l7x-lm.htf): fixed
+	diacritic marks for Lithuanian language.
+	https://puszcza.gnu.org.ua/bugs/?263
+
+2015-09-29  Michal Hoftich  <michal.h21@gmail.com>
+
+	* tex4ht-ooffice.tex (configure ooffice subscript),
+	* tex4ht-4ht.tex (subscript.4ht),
+	* tex4ht-html4.tex (configure html4 subscript):
+	support for \textsubscript.  http://puszcza.gnu.org.ua/bugs/?262
+	* Makefile (derived): add subscript.4ht.
+
+2015-08-05  Michal Hoftich  <michal.h21@gmail.com>
+        and Karl Berry <karl@gnu.org>
+
+	* Makefile (derived): add graphicx.4ht.
+	* tex4ht-4ht.tex (graphicx.4ht): usee .xbb for png/jpg/gif.
+	https://puszcza.gnu.org.ua/bugs/?257
+
 2015-06-10  Michal Hoftich  <michal.h21@gmail.com>
 
 	* tex4ht-ooffice.tex (save image name): use \Gin@ext rather than

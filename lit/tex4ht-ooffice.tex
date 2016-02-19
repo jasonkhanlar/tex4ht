@@ -1,4 +1,4 @@
-% $Id$
+% $Id: tex4ht-ooffice.tex 159 2015-12-22 23:56:12Z karl $
 % compile 3 times: latex tex4ht-ooffice
 %      htlatex tex4ht-ooffice "xhtml,4,sections+"
 % Copyright 2009-2015 TeX Users Group
@@ -7877,33 +7877,7 @@ An approximation is provided here, to be cleaned by xtpipes.
 
 
 \<il2-pl.tcx url encoder\><<<
-\Configure{url-encoder}
-      {%}{%25}
-      {&}{%26}
-      {'}{%27}
-      {<}{%3C}
-      {>}{%3E}
-      {_}{_}
-      {^}{^}
-      {±}{&#x0105;}
-      {æ}{&#x0107;}
-      {ê}{&#x0119;}
-      {³}{&#x0142;}
-      {ó}{&#x00F3;}
-      {ñ}{&#x0144;}
-      {¶}{&#x015B;}
-      {¼}{&#x017A;}
-      {¿}{&#x017C;}
-      {¡}{&#x0104;}
-      {Æ}{&#x0106;}
-      {Ê}{&#x0118;}
-      {£}{&#x0141;}
-      {Ó}{&#x00D3;}
-      {Ñ}{&#x0143;}
-      {¦}{&#x015A;}
-      {¬}{&#x0179;}
-      {¯}{&#x017B;}
-      {}{}
+\input{html4-l2-url.4ht}
 >>>
 
 
@@ -11674,7 +11648,20 @@ OO doesn't seem to hono mfenced
     {\endWrap}
 >>>>
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{subscript}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\<configure ooffice subscript\><<<
+\Configure{textsubscript}
+  {\HCode{<text:span text:style-name="textsubscript">}}
+  {\HCode{</text:span>}} 
+\OOstyles{%
+<style:style style:name="textsubscript" style:family="text">\Hnewline
+   <style:text-properties style:text-position="sub"/>\Hnewline
+</style:style>\Hnewline
+}
+>>>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Notes}

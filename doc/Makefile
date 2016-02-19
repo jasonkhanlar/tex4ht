@@ -1,4 +1,4 @@
-# $Id$
+# $Id: Makefile 115 2013-10-08 18:07:59Z karl $
 # This file is public domain.  Originally written 2010, Karl Berry.
 
 pdflatex = pdflatex -interaction=nonstopmode -file-line-error

@@ -1,7 +1,7 @@
-% $Id$
+% $Id: tex4ht-4ht.tex 161 2016-01-13 00:01:52Z karl $
 % tex tex4ht-4ht   or   ht tex tex4ht-4ht
 %
-% Copyright 2009-2015 TeX Users Group    
+% Copyright 2009-2016 TeX Users Group    
 % Copyright 1996-2009 Eitan M. Gurari    
 % Released under LPPL 1.3c+.
 % See tex4ht-cpright.tex for license text.
@@ -1843,7 +1843,7 @@ and \''\Tg'.
 >>>
 
 \<config biblatex\><<<
-\ifdefstring{\abx@version}{3.0}{\xdef\blx:ver:no{3}}{\xdef\blx:ver:no{2.9}}
+\ifdim\abx@version pt< 3pt \xdef\blx:ver:no{2}\else\xdef\blx:ver:no{3}\fi
 \ifx\a:printshorthands\Undef\let\blx@shorthands\@empty\fi
 \ifx\blx@startbib\:UnDef
  \pend:def\blx@shorthands{%
@@ -3524,10 +3524,9 @@ This will not work for documents broken into pages!!  The
 \Link[http://www.tug.org/ListsArchives/pdftex/msg02400.html]{}{}msg02400\EndLink
 
 \<hyperref.4ht\><<<
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-% hyperref.4ht                          |version %
-% Copyright (C) |CopyYear.1999.       Eitan M. Gurari         %
-|<TeX4ht copyright|>
+% hyperref.4ht (|version), generated from |jobname.tex
+% Copyright |CopyYear.1999. Eitan M. Gurari 
+|<TeX4ht copywrite|>
 \csname end:hyperref\endcsname
 |<nameref.sty|>
 |<ifHy@texht undefined?|>
@@ -4392,7 +4391,10 @@ but they are not accessible there in tex4ht mode.
 \expandafter\ifx \csname real@setref\endcsname\relax 
    \def\@pagerefstar#1{%  
       \HyRef@StarSetRef{#1}\@secondoffive  
-   } 
+   }
+   \def\@namerefstar#1{%
+       \HyRef@StarSetRef{#1}\@thirdoffive
+     }
    \def\HyRef@StarSetRef#1{%  
      \begingroup  
        \Hy@safe@activestrue  
@@ -9438,6 +9440,31 @@ active character.
 
 The definition of \`'\@textsuperscript' in latex2e uses feartures not
 available in latex209.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\SubSection{Subscripts}
+
+This is a variant of textsuperscript.
+
+\<subscript.4ht\><<<
+\def\:temp#1{%
+   {\m@th\ensuremath{_{\mbox{\fontsize\sf@size\z@#1}}}}}
+\ifx \@textsubscript\:temp
+  \def\:tempc#1{{\m@th%
+     \ifmmode {\HCode{}}\sb {\mbox{\fontsize\sf@size\z@#1}}%
+     \else%
+        \a:textsubscript%
+           {\mbox{#1}}\b:textsubscript%
+     \fi }}
+  \HLet\@textsubscript\:tempc
+\fi
+\NewConfigure{textsubscript}{2}
+\Configure{textsubscript}
+   {$\relax{\HCode{}}\sb}
+   {$}
+\Hinput{subscript}
+\endinput
+>>>  \AddFile{9}{subscript}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \Section{subfigure.sty}
@@ -21418,6 +21445,7 @@ Note: we should distinguish between
 |<TeX4ht copyright|>
 |<declare frenchb shorthand|>
 |<frenchb nbsp|>
+|<frenchb luatex|>
 \Hinput{frenchb}
 \endinput
 >>>        \AddFile{8}{frenchb}
@@ -21455,6 +21483,12 @@ Note: we should distinguish between
 \NewConfigure{frenchb-nbsp}{2}
 \NewConfigure{frenchb-thinspace}{2}
 \NewConfigure{system-nbsp}{2}
+>>>
+
+\<frenchb luatex\><<<
+\ifFB@luatex@punct
+\FB@luatex@punctfalse
+\fi
 >>>
 
 \<pre 2001/09/09 v1.5g frenchb\><<<
@@ -23602,9 +23636,9 @@ For xml
 
 \<graphicx.4ht\><<<
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-% graphicx.4ht                          |version %
-% Copyright (C) |CopyYear.2003.       Eitan M. Gurari         %
-|<TeX4ht copyright|>
+% graphicx.4ht (|version), generated from |jobname.tex
+% Copyright (C) |CopyYear.2003. Eitan M. Gurari
+|<TeX4ht copywrite|>
    |<fix graphicx|>
 \Hinput{graphicx}
 \endinput
@@ -23627,6 +23661,9 @@ For xml
    \fi
    \Gin:esetsize
 }
+\DeclareGraphicsRule{.png}{bmp}{.xbb}{}
+\DeclareGraphicsRule{.jpg}{bmp}{.xbb}{}
+\DeclareGraphicsRule{.gif}{bmp}{.xbb}{}
 >>>
 
 The calc package redefined \`'\setlength' to allow expressions of the

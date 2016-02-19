@@ -1,4 +1,4 @@
-% $Id$
+% $Id: tex4ht-html4.tex 155 2015-09-29 22:18:50Z karl $
 % Compile 3 times: latex tex4ht-html4
 % Copy html4.4ht into the work directory before each of the 
 %            first two compilations
@@ -5495,6 +5495,11 @@ An alternative css-based approach:
   {\egroup \HCode{</sup>}}
 >>>
 
+\<configure html4 subscript\><<<
+\Configure{textsubscript}
+  {\HCode{<sub class="textsubscript">}\bgroup\small}
+  {\egroup \HCode{</sub>}}
+>>>
 
 %%%%%%%%%%%%%%%%
 \section{Floats}
