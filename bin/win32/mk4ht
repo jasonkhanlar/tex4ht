@@ -39,7 +39,7 @@ my @options = (
  "xh", "xhlatex",  "latex",   "xhtml", "", "-cvalidate",
  "xh", "xhtex",    "tex",     "xhtml", "", "-cvalidate",
  "xh", "xhtexi",   "texi",    "xhtml", "", "-cvalidate",
- "xh", "xhcontext","context", "xhtml", "", "-cvalidat",
+ "xh", "xhcontext","context", "xhtml", "", "-cvalidate",
  "xh", "xhxelatex", "xelatex", "xhtml", "", "-cvalidate",
  "xh", "xhxetex",  "xetex",   "xhtml", "", "-cvalidate",
  "uxh", "uxhlatex",  "latex",   "xhtml,uni-html4", " -cunihtf", "-cvalidate",
