@@ -126,7 +126,7 @@ my @options = (
 
 );
 
-sub showInstrucions(){
+sub showInstructions(){
   print " option1:  mk4ht #1 \"#2\" \"#3\" \"#4\" \"#5\"\n";
   print " \n";
   print "    #1: htlatex, xhlatex, mzlatex, oolatex, dblatex, dbmlatex,\n";
@@ -219,7 +219,7 @@ sub showInstrucions(){
 print "mk4ht (Version 1.1)\n";
 if(  !@ARGV  ){
   print "improper command\n";
-  showInstrucions(); exit(1);
+  showInstructions(); exit(1);
 }
 my @command=("","","","","");
 my $i=0;
@@ -337,7 +337,7 @@ foreach $param (@ARGV) {
         if( $t4ht   ){ $command[4] = $t4ht;   } else { $command[4] = ""; }
       } else {
         print "improper command: $param \n";
-        showInstrucions(); exit(1);
+        showInstructions(); exit(1);
       }
     }
   } elsif ( $i == 1 ) {

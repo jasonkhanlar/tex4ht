@@ -1365,7 +1365,7 @@ if( @ARGV  ){
 print "mk4ht (?version)\n";
 if(  !@ARGV  ){
   print "improper command\n";
-  showInstrucions(); exit(1);
+  showInstructions(); exit(1);
 }
 my @command=("","","","","");
 my $i=0;
@@ -1389,7 +1389,7 @@ foreach $param (@ARGV) {
       if( $name ){ ?<use cfg command?> }
       else {
           print "improper command: $param \n";
-          showInstrucions(); exit(1); 
+          showInstructions(); exit(1); 
     } }
   } elsif ( $i== 1 ) {
     $command[1] = $param;
@@ -1688,7 +1688,7 @@ elsif($line =~ m|^\s*clean\s+(.+)|){
 
 
 \<help info\><<<-
-sub showInstrucions(){
+sub showInstructions(){
   print " option1:  mk4ht #1 \"#2\" \"#3\" \"#4\" \"#5\"\n";
   print " \n";
   print "    #1: htlatex, xhlatex, mzlatex, oolatex, dblatex, dbmlatex,\n";
